@@ -1,0 +1,50 @@
+/* Стили для PhotoSlider */
+.photo-slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden; /* Скрывает изображения за пределами слайдера */
+}
+
+.photo-slider .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Плавный переход для слайдов */
+}
+
+.photo-slider .slide {
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.photo-slider .slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.photo-slider .prev, .photo-slider .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.photo-slider .prev {
+    left: 10px;
+}
+
+.photo-slider .next {
+    right: 10px;
+}
+
+/* Стили для кнопок, которые показывают следующий/предыдущий слайд */
+.photo-slider .prev:hover, .photo-slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
