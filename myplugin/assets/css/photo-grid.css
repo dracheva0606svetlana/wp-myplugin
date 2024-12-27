@@ -1,0 +1,45 @@
+/* Стили для PhotoGrid */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Автоматическая сетка с минимальной шириной 250px */
+    gap: 15px; /* Расстояние между элементами */
+    margin: 20px 0;
+}
+
+.photo-grid .photo-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-grid .photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Обеспечивает правильную обрезку изображений */
+    border-radius: 8px;
+}
+
+.photo-grid .photo-item:hover {
+    transform: scale(1.05); /* Эффект увеличения при наведении */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Более интенсивная тень при наведении */
+}
+
+/* Кнопка "Загрузить еще" */
+.load-more-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+}
+
+.load-more-btn:hover {
+    background-color: #0056b3;
+}
